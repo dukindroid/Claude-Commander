@@ -1,45 +1,45 @@
-# Product Context
+# Contexto del Producto
 
-## Why This Project Exists
+## Razón de Ser de Este Proyecto
 
-Grupo Minero La Fundición, a mining company with ~40 employees, faces significant operational inefficiencies due to unstructured fleet management and maintenance processes. Heavy machinery downtime in workshops directly impacts productivity and profitability. The company needs a digital framework to optimize fleet availability and establish structured operational processes.
+Grupo Minero La Fundición, una empresa minera con aproximadamente 40 empleados, enfrenta importantes ineficiencias operativas debido a la gestión no estructurada de la flota y los procesos de mantenimiento. El tiempo de inactividad de la maquinaria pesada en los talleres impacta directamente la productividad y la rentabilidad. La empresa necesita un marco digital para optimizar la disponibilidad de la flota y establecer procesos operativos estructurados.
 
-## Problems It Solves
+## Problemas que Resuelve
 
-### Primary Problems
-- **Unplanned machinery downtime**: Heavy equipment sits idle in workshops due to poor maintenance coordination
-- **Inefficient maintenance processes**: Lack of structured preventive maintenance scheduling
-- **Poor inventory control**: No systematic tracking of spare parts and materials
-- **Limited operational visibility**: Management lacks real-time insight into fleet status and maintenance activities
-- **Manual coordination**: Paper-based or ad-hoc communication between operators, mechanics, and management
+### Problemas Principales
+- **Tiempo de inactividad no planificado de la maquinaria**: El equipo pesado permanece inactivo en los talleres debido a una mala coordinación del mantenimiento
+- **Procesos de mantenimiento ineficientes**: Falta de una programación estructurada de mantenimiento preventivo
+- **Control de inventario deficiente**: No hay un seguimiento sistemático de las piezas de repuesto y los materiales
+- **Visibilidad operativa limitada**: La gerencia carece de información en tiempo real sobre el estado de la flota y las actividades de mantenimiento
+- **Coordinación manual**: Comunicación en papel o ad-hoc entre operadores, mecánicos y gerencia
 
-### Secondary Problems
-- Difficulty tracking maintenance costs per unit
-- Inconsistent service documentation
-- Poor resource allocation for maintenance tasks
-- Lack of historical data for decision-making
+### Problemas Secundarios
+- Dificultad para rastrear los costos de mantenimiento por unidad
+- Documentación de servicio inconsistente
+- Mala asignación de recursos para tareas de mantenimiento
+- Falta de datos históricos para la toma de decisiones
 
-## How It Should Work
+## Cómo Debería Funcionar
 
-### Core Workflow
-1. **Fleet Monitoring**: Real-time dashboard showing status of all vehicles (available, in-route, under maintenance, unassigned)
-2. **Issue Reporting**: Operators can quickly report mechanical problems through mobile-friendly interface
-3. **Maintenance Coordination**: Mechanics receive prioritized work orders with material requirements
-4. **Inventory Integration**: Automatic checking of parts availability and procurement needs
-5. **Service Documentation**: Complete logging of all maintenance activities with timestamps and materials used
+### Flujo de Trabajo Principal
+1. **Monitoreo de Flota**: Panel en tiempo real que muestra el estado de todos los vehículos (disponible, en ruta, en mantenimiento, sin asignar)
+2. **Reporte de Problemas**: Los operadores pueden reportar rápidamente problemas mecánicos a través de una interfaz amigable para dispositivos móviles
+3. **Coordinación de Mantenimiento**: Los mecánicos reciben órdenes de trabajo priorizadas con requisitos de materiales
+4. **Integración de Inventario**: Verificación automática de la disponibilidad de piezas y necesidades de adquisición
+5. **Documentación de Servicio**: Registro completo de todas las actividades de mantenimiento con marcas de tiempo y materiales utilizados
 
-### User Experience Goals
-- **Simplicity**: Intuitive interface requiring minimal training
-- **Speed**: Quick access to critical information and fast problem reporting
-- **Reliability**: System availability matching operational hours (6 AM - 6 PM minimum)
-- **Mobility**: Responsive design for tablets and mobile devices used in field
-- **Collaboration**: Real-time updates visible to all relevant stakeholders
+### Objetivos de Experiencia de Usuario
+- **Simplicidad**: Interfaz intuitiva que requiere una capacitación mínima
+- **Velocidad**: Acceso rápido a información crítica y reporte rápido de problemas
+- **Fiabilidad**: Disponibilidad del sistema que coincida con las horas operativas (mínimo de 6 AM a 6 PM)
+- **Movilidad**: Diseño responsivo para tabletas y dispositivos móviles utilizados en el campo
+- **Colaboración**: Actualizaciones en tiempo real visibles para todas las partes interesadas relevantes
 
-## Success Vision
+## Visión de Éxito
 
-A mining operation where:
-- Fleet availability consistently exceeds 80%
-- Maintenance issues are identified and resolved proactively
-- All stakeholders have clear visibility into operational status
-- Data-driven decisions replace reactive problem-solving
-- Operational efficiency improvements are measurable and sustained
+Una operación minera donde:
+- La disponibilidad de la flota supera consistentemente el 80%
+- Los problemas de mantenimiento se identifican y resuelven de forma proactiva
+- Todas las partes interesadas tienen una visibilidad clara del estado operativo
+- Las decisiones basadas en datos reemplazan la resolución reactiva de problemas
+- Las mejoras en la eficiencia operativa son medibles y sostenidas

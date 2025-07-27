@@ -1,149 +1,149 @@
-# Active Context
+# Contexto Activo
 
-## Current Work Focus
+## Enfoque de Trabajo Actual
 
-### Project Status: Planning and Initial Data Setup Phase
-The project is currently in the foundational phase, focusing on:
-1. **Tool Setup and Familiarization**: Successfully configured Docker, Odoo 18, and MCP servers
-2. **Data Import Strategy**: Working on CSV-based initial data loading for employees, fleet, and inventory
-3. **User Import Progress**: Created comprehensive guide for employee data import (see `db_init/user_initialization_guide.md`)
+### Estado del Proyecto: Fase de Planificación y Configuración Inicial de Datos
+El proyecto se encuentra actualmente en la fase fundamental, centrándose en:
+1. **Configuración y Familiarización con Herramientas**: Docker, Odoo 18 y servidores MCP configurados con éxito
+2. **Estrategia de Importación de Datos**: Trabajando en la carga inicial de datos basada en CSV para empleados, flota e inventario
+3. **Progreso de Importación de Usuarios**: Guía completa creada para la importación de datos de empleados (ver `db_init/user_initialization_guide.md`)
 
-### Immediate Priority: Employee Data Import
-- **Status**: Template and process documented
-- **Next Step**: Need to structure employee CSV with proper departmental hierarchy
-- **Blocker**: Organizational chart needs to be defined before employee import
-- **Dependencies**: Role definitions should precede user creation
+### Prioridad Inmediata: Importación de Datos de Empleados
+- **Estado**: Plantilla y proceso documentados
+- **Próximo Paso**: Necesidad de estructurar el CSV de empleados con la jerarquía departamental adecuada
+- **Bloqueador**: El organigrama debe definirse antes de la importación de empleados
+- **Dependencias**: Las definiciones de roles deben preceder a la creación de usuarios
 
-## Recent Changes
+## Cambios Recientes
 
-### Documentation Structure
-- Established comprehensive memory bank following Cline's requirements
-- Created detailed PRD documents (`prd-odoo.md` and `prd.md`) with different approaches
-- Documented progress and technical decisions in `progress.md`
+### Estructura de Documentación
+- Banco de memoria integral establecido siguiendo los requisitos de Cline
+- Documentos PRD detallados creados (`prd-odoo.md` y `prd.md`) con diferentes enfoques
+- Progreso y decisiones técnicas documentadas en `progress.md`
 
-### Technical Setup
-- Docker environment configured and tested
-- Odoo 18 Community installation verified
-- MCP servers configured:
-  - Context7 for Odoo documentation
-  - mcp-odoo for direct Odoo integration
-  - whatsapp-mcp for communication
-  - Google Drive MCP for document management
+### Configuración Técnica
+- Entorno Docker configurado y probado
+- Instalación de Odoo 18 Community verificada
+- Servidores MCP configurados:
+  - Context7 para documentación de Odoo
+  - mcp-odoo para integración directa con Odoo
+  - whatsapp-mcp para comunicación
+  - Google Drive MCP para gestión de documentos
 
-### Data Import Framework
-- CSV import methodology established
-- Employee import template created
-- Process documentation completed in `db_init/user_initialization_guide.md`
+### Marco de Importación de Datos
+- Metodología de importación CSV establecida
+- Plantilla de importación de empleados creada
+- Documentación del proceso completada en `db_init/user_initialization_guide.md`
 
-## Next Steps
+## Próximos Pasos
 
-### Phase 1: Complete Foundation (Weeks 1-4)
-1. **Define Organizational Structure**
-   - Create company organigram
-   - Define departments: Operations, Maintenance, Administration, Procurement, Warehouse
-   - Establish role hierarchy: Director, Supervisor, Operator, Mechanic, etc.
+### Fase 1: Completar la Base (Semanas 1-4)
+1. **Definir la Estructura Organizacional**
+   - Crear organigrama de la empresa
+   - Definir departamentos: Operaciones, Mantenimiento, Administración, Compras, Almacén
+   - Establecer jerarquía de roles: Director, Supervisor, Operador, Mecánico, etc.
 
-2. **Employee Data Import**
-   - Finalize CSV structure with roles and departments
-   - Import employee data from Google Drive source
-   - Configure user permissions and access levels
+2. **Importación de Datos de Empleados**
+   - Finalizar la estructura CSV con roles y departamentos
+   - Importar datos de empleados desde la fuente de Google Drive
+   - Configurar permisos de usuario y niveles de acceso
 
-3. **Fleet Module Setup**
-   - Register all mining vehicles and equipment
-   - Assign operators to specific units
-   - Configure maintenance schedules and templates
+3. **Configuración del Módulo de Flota**
+   - Registrar todos los vehículos y equipos mineros
+   - Asignar operadores a unidades específicas
+   - Configurar programas y plantillas de mantenimiento
 
-4. **Inventory Module Configuration**
-   - Set up spare parts and materials catalog
-   - Define warehouse locations and storage areas
-   - Establish procurement workflows
+4. **Configuración del Módulo de Inventario**
+   - Configurar el catálogo de repuestos y materiales
+   - Definir ubicaciones de almacén y áreas de almacenamiento
+   - Establecer flujos de trabajo de adquisición
 
-### Phase 2: Operational Workflows (Weeks 5-8)
-1. **Maintenance Work Orders**
-   - Configure preventive maintenance schedules
-   - Set up work order templates
-   - Integrate with inventory for parts tracking
+### Fase 2: Flujos de Trabajo Operativos (Semanas 5-8)
+1. **Órdenes de Trabajo de Mantenimiento**
+   - Configurar programas de mantenimiento preventivo
+   - Configurar plantillas de órdenes de trabajo
+   - Integrar con el inventario para el seguimiento de piezas
 
-2. **Real-time Status Updates**
-   - Configure fleet status tracking
-   - Set up automated notifications
-   - Create role-based dashboards
+2. **Actualizaciones de Estado en Tiempo Real**
+   - Configurar el seguimiento del estado de la flota
+   - Configurar notificaciones automatizadas
+   - Crear paneles basados en roles
 
-## Active Decisions and Considerations
+## Decisiones y Consideraciones Activas
 
-### Platform Choice Validation
-- **Decision**: Odoo Community 18.0 over custom development
-- **Rationale**: Faster implementation, proven modules, extensive documentation
-- **Trade-offs**: Learning curve for Python/Odoo, limited to community features
+### Validación de la Elección de Plataforma
+- **Decisión**: Odoo Community 18.0 sobre desarrollo personalizado
+- **Justificación**: Implementación más rápida, módulos probados, documentación extensa
+- **Compensaciones**: Curva de aprendizaje para Python/Odoo, limitado a características de la comunidad
 
-### Data Import Strategy
-- **Decision**: CSV-based initial data loading
-- **Rationale**: Simple, reliable, and supported by Odoo's import tools
-- **Implementation**: Structured templates for each data type (employees, fleet, inventory)
+### Estrategia de Importación de Datos
+- **Decisión**: Carga inicial de datos basada en CSV
+- **Justificación**: Simple, confiable y compatible con las herramientas de importación de Odoo
+- **Implementación**: Plantillas estructuradas para cada tipo de datos (empleados, flota, inventario)
 
-### Development Approach
-- **Decision**: AI-assisted development with Claude Code
-- **Rationale**: Compensates for Python/Odoo knowledge gap
-- **Support Tools**: MCP servers for documentation and integration
+### Enfoque de Desarrollo
+- **Decisión**: Desarrollo asistido por IA con Claude Code
+- **Justificación**: Compensa la brecha de conocimiento de Python/Odoo
+- **Herramientas de Soporte**: Servidores MCP para documentación e integración
 
-## Important Patterns and Preferences
+## Patrones y Preferencias Importantes
 
-### Documentation Standards
-- Comprehensive memory bank maintenance for context preservation
-- Bilingual documentation (Spanish for business context, English for technical)
-- Progress tracking with clear phase definitions and milestones
+### Estándares de Documentación
+- Mantenimiento integral del banco de memoria para la preservación del contexto
+- Documentación bilingüe (español para el contexto empresarial, inglés para el técnico)
+- Seguimiento del progreso con definiciones claras de fases e hitos
 
-### Technical Patterns
-- Docker-first deployment for consistency
-- Modular implementation focusing on core modules first
-- CSV-based data exchange for simplicity and reliability
-- Role-based access control leveraging Odoo's built-in capabilities
+### Patrones Técnicos
+- Despliegue "Docker-first" para la consistencia
+- Implementación modular centrándose primero en los módulos principales
+- Intercambio de datos basado en CSV para la simplicidad y confiabilidad
+- Control de acceso basado en roles aprovechando las capacidades incorporadas de Odoo
 
-### User Experience Priorities
-- Mobile-first design for field operations
-- Simplified interfaces requiring minimal training
-- Real-time updates for operational visibility
-- Progressive disclosure based on user roles
+### Prioridades de Experiencia de Usuario
+- Diseño "mobile-first" para operaciones de campo
+- Interfaces simplificadas que requieren una capacitación mínima
+- Actualizaciones en tiempo real para la visibilidad operativa
+- Divulgación progresiva basada en roles de usuario
 
-## Learnings and Project Insights
+## Aprendizajes e Ideas del Proyecto
 
-### Key Discoveries
-1. **Odoo's Power**: The platform provides significantly more functionality than initially expected
-2. **Docker Benefits**: Containerization simplifies development environment management
-3. **MCP Integration**: Claude's enhanced capabilities through MCP servers dramatically improve development efficiency
-4. **Data Structure Importance**: Proper organizational hierarchy is critical before user import
+### Descubrimientos Clave
+1. **El Poder de Odoo**: La plataforma proporciona significativamente más funcionalidad de lo esperado inicialmente
+2. **Beneficios de Docker**: La contenerización simplifica la gestión del entorno de desarrollo
+3. **Integración MCP**: Las capacidades mejoradas de Claude a través de los servidores MCP mejoran drásticamente la eficiencia del desarrollo
+4. **Importancia de la Estructura de Datos**: La jerarquía organizacional adecuada es crítica antes de la importación de usuarios
 
-### Risk Mitigation
-- **Knowledge Gap**: Addressed through AI assistance and comprehensive documentation
-- **Complexity Management**: Phased approach prevents overwhelming scope
-- **User Adoption**: Focus on simplicity and role-based interfaces
+### Mitigación de Riesgos
+- **Brecha de Conocimiento**: Abordada mediante asistencia de IA y documentación exhaustiva
+- **Gestión de la Complejidad**: El enfoque por fases evita un alcance abrumador
+- **Adopción por el Usuario**: Enfoque en la simplicidad y las interfaces basadas en roles
 
-### Success Factors
-- Clear documentation and context preservation
-- Incremental implementation with user feedback
-- Leveraging proven platforms rather than custom development
-- Strong AI assistance for technical challenges
+### Factores de Éxito
+- Documentación clara y preservación del contexto
+- Implementación incremental con retroalimentación del usuario
+- Aprovechamiento de plataformas probadas en lugar de desarrollo personalizado
+- Fuerte asistencia de IA para desafíos técnicos
 
-## Current Blockers and Solutions
+## Bloqueadores y Soluciones Actuales
 
-### Organizational Data
-- **Blocker**: Need complete employee list with roles and departments
-- **Solution**: Coordinate with management to provide Google Drive access to personnel data
+### Datos Organizacionales
+- **Bloqueador**: Necesidad de una lista completa de empleados con roles y departamentos
+- **Solución**: Coordinar con la gerencia para proporcionar acceso a Google Drive a los datos del personal
 
-### Role Definition
-- **Blocker**: Company organigram not yet defined
-- **Solution**: Work with management to establish departmental structure and role hierarchy
+### Definición de Roles
+- **Bloqueador**: Organigrama de la empresa aún no definido
+- **Solución**: Trabajar con la gerencia para establecer la estructura departamental y la jerarquía de roles
 
-### Fleet Information
-- **Blocker**: Waiting for complete fleet inventory and specifications
-- **Solution**: Request detailed vehicle list with operator assignments and maintenance history
+### Información de la Flota
+- **Bloqueador**: Esperando el inventario completo de la flota y las especificaciones
+- **Solución**: Solicitar una lista detallada de vehículos con asignaciones de operador e historial de mantenimiento
 
-## Context for Next Session
+## Contexto para la Próxima Sesión
 
-When resuming work, priority should be:
-1. Review any new organizational data provided
-2. Complete role and department structure definition
-3. Finalize employee CSV import process
-4. Begin fleet module configuration
+Al reanudar el trabajo, la prioridad debe ser:
+1. Revisar cualquier nuevo dato organizacional proporcionado
+2. Completar la definición de la estructura de roles y departamentos
+3. Finalizar el proceso de importación de CSV de empleados
+4. Comenzar la configuración del módulo de flota
 
-The foundation is solid, and the next phase requires business stakeholder input to proceed with data import and configuration.
+La base es sólida y la siguiente fase requiere la aportación de las partes interesadas del negocio para proceder con la importación y configuración de datos.

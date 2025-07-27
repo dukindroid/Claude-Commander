@@ -1,110 +1,110 @@
-# System Patterns
+# Patrones del Sistema
 
-## System Architecture
+## Arquitectura del Sistema
 
-### Platform Choice: Odoo Community 18.0
-After evaluating custom development vs. ERP solution, chose Odoo for:
-- Pre-built modules for Employees, Fleet, and Inventory
-- Proven enterprise-grade architecture
-- Extensive documentation and community support
-- Faster time-to-market vs. building from scratch
+### Elección de Plataforma: Odoo Community 18.0
+Después de evaluar el desarrollo personalizado vs. la solución ERP, se eligió Odoo por:
+- Módulos preconstruidos para Empleados, Flota e Inventario
+- Arquitectura probada de nivel empresarial
+- Amplia documentación y soporte comunitario
+- Menor tiempo de comercialización en comparación con la construcción desde cero
 
-### Deployment Architecture
+### Arquitectura de Despliegue
 ```
-Docker Container (Odoo 18.0)
-├── PostgreSQL Database
-├── Odoo Community Modules
-│   ├── Employees Module
-│   ├── Fleet Module
-│   └── Inventory Module
-└── Custom Configurations
-```
-
-### Key Technical Decisions
-
-1. **Docker-based Deployment**: Ensures consistent environment across development and production
-2. **Modular Implementation**: Focus on core modules (Employees, Fleet, Inventory) before expanding
-3. **Data Import Strategy**: CSV-based initial data loading for users, fleet, and inventory
-4. **Role-based Access**: Leverage Odoo's built-in user management and permissions
-
-## Design Patterns in Use
-
-### Data Management Patterns
-- **Master Data Management**: Centralized employee, fleet, and inventory records
-- **Audit Trail**: Built-in Odoo logging for all data changes
-- **Hierarchical Organization**: Department-based employee structure
-- **Asset Lifecycle**: Fleet units with maintenance history tracking
-
-### User Interface Patterns
-- **Role-based Dashboards**: Different views for operators, mechanics, supervisors, and administrators
-- **Mobile-first Design**: Responsive interface for field operations
-- **Progressive Disclosure**: Show relevant information based on user role and context
-- **Real-time Updates**: Live status updates for fleet and maintenance activities
-
-### Integration Patterns
-- **CSV Import/Export**: Standard data exchange format for initial setup and reporting
-- **API-first Approach**: Leverage Odoo's REST API for future integrations
-- **Modular Extensions**: Use Odoo's addon system for custom functionality
-
-## Component Relationships
-
-### Core Module Dependencies
-```
-Employees Module
-├── Provides user authentication
-├── Defines departmental hierarchy
-└── Links to Fleet assignments
-
-Fleet Module
-├── Depends on Employees for operator assignments
-├── Links to Inventory for maintenance materials
-└── Generates maintenance work orders
-
-Inventory Module
-├── Tracks spare parts and materials
-├── Links to Fleet for maintenance requirements
-└── Supports procurement workflows
+Contenedor Docker (Odoo 18.0)
+├── Base de Datos PostgreSQL
+├── Módulos de Odoo Community
+│   ├── Módulo de Empleados
+│   ├── Módulo de Flota
+│   └── Módulo de Inventario
+└── Configuraciones Personalizadas
 ```
 
-### Data Flow
-1. **Employee Setup** → Department assignment → Fleet access permissions
-2. **Fleet Registration** → Operator assignment → Maintenance scheduling
-3. **Inventory Management** → Material availability → Maintenance execution
-4. **Maintenance Workflow** → Work order creation → Material consumption → Status updates
+### Decisiones Técnicas Clave
 
-## Critical Implementation Paths
+1. **Despliegue Basado en Docker**: Asegura un entorno consistente entre desarrollo y producción
+2. **Implementación Modular**: Enfoque en módulos centrales (Empleados, Flota, Inventario) antes de expandir
+3. **Estrategia de Importación de Datos**: Carga inicial de datos basada en CSV para usuarios, flota e inventario
+4. **Acceso Basado en Roles**: Aprovechar la gestión de usuarios y permisos incorporada de Odoo
 
-### Phase 1: Foundation Setup
-1. Docker environment configuration
-2. Odoo installation and basic configuration
-3. Employee module setup with departmental structure
-4. Initial user import from CSV
+## Patrones de Diseño en Uso
 
-### Phase 2: Fleet Integration
-1. Fleet module configuration
-2. Vehicle registration and operator assignments
-3. Maintenance schedule templates
-4. Integration with inventory for parts tracking
+### Patrones de Gestión de Datos
+- **Gestión de Datos Maestros**: Registros centralizados de empleados, flota e inventario
+- **Pista de Auditoría**: Registro de todos los cambios de datos incorporado en Odoo
+- **Organización Jerárquica**: Estructura de empleados basada en departamentos
+- **Ciclo de Vida de Activos**: Unidades de flota con seguimiento del historial de mantenimiento
 
-### Phase 3: Operational Workflows
-1. Maintenance work order processes
-2. Real-time status updates
-3. Reporting and dashboard configuration
-4. User training and adoption
+### Patrones de Interfaz de Usuario
+- **Paneles Basados en Roles**: Diferentes vistas para operadores, mecánicos, supervisores y administradores
+- **Diseño Mobile-first**: Interfaz responsiva para operaciones de campo
+- **Divulgación Progresiva**: Mostrar información relevante según el rol y contexto del usuario
+- **Actualizaciones en Tiempo Real**: Actualizaciones de estado en vivo para actividades de flota y mantenimiento
 
-## Technical Constraints
+### Patrones de Integración
+- **Importación/Exportación CSV**: Formato estándar de intercambio de datos para configuración inicial e informes
+- **Enfoque API-first**: Aprovechar la API REST de Odoo para futuras integraciones
+- **Extensiones Modulares**: Usar el sistema de complementos de Odoo para funcionalidades personalizadas
 
-### Performance Considerations
-- Target: Support 40 concurrent users
-- Database optimization for fleet and inventory queries
-- Mobile interface performance on tablets/smartphones
+## Relaciones entre Componentes
 
-### Security Requirements
-- Role-based access control (RBAC)
-- Secure authentication for field operations
-- Data backup and recovery procedures
+### Dependencias del Módulo Principal
+```
+Módulo de Empleados
+├── Proporciona autenticación de usuario
+├── Define la jerarquía departamental
+└── Enlaces a asignaciones de Flota
 
-### Scalability Patterns
-- Modular architecture allows incremental feature addition
-- Database design supports growth in fleet size and transaction volume
-- Container-based deployment enables horizontal scaling if needed
+Módulo de Flota
+├── Depende de Empleados para asignaciones de operador
+├── Enlaces a Inventario para materiales de mantenimiento
+└── Genera órdenes de trabajo de mantenimiento
+
+Módulo de Inventario
+├── Rastrea piezas de repuesto y materiales
+├── Enlaces a Flota para requisitos de mantenimiento
+└── Soporta flujos de trabajo de adquisición
+```
+
+### Flujo de Datos
+1. **Configuración de Empleados** → Asignación de departamento → Permisos de acceso a la flota
+2. **Registro de Flota** → Asignación de operador → Programación de mantenimiento
+3. **Gestión de Inventario** → Disponibilidad de materiales → Ejecución de mantenimiento
+4. **Flujo de Trabajo de Mantenimiento** → Creación de órdenes de trabajo → Consumo de materiales → Actualizaciones de estado
+
+## Rutas Críticas de Implementación
+
+### Fase 1: Configuración de la Base
+1. Configuración del entorno Docker
+2. Instalación y configuración básica de Odoo
+3. Configuración del módulo de empleados con estructura departamental
+4. Importación inicial de usuarios desde CSV
+
+### Fase 2: Integración de Flota
+1. Configuración del módulo de flota
+2. Registro de vehículos y asignaciones de operador
+3. Plantillas de programación de mantenimiento
+4. Integración con inventario para el seguimiento de piezas
+
+### Fase 3: Flujos de Trabajo Operativos
+1. Procesos de órdenes de trabajo de mantenimiento
+2. Actualizaciones de estado en tiempo real
+3. Configuración de informes y paneles
+4. Capacitación y adopción de usuarios
+
+## Restricciones Técnicas
+
+### Consideraciones de Rendimiento
+- Objetivo: Soportar 40 usuarios concurrentes
+- Optimización de la base de datos para consultas de flota e inventario
+- Rendimiento de la interfaz móvil en tabletas/smartphones
+
+### Requisitos de Seguridad
+- Control de acceso basado en roles (RBAC)
+- Autenticación segura para operaciones de campo
+- Procedimientos de copia de seguridad y recuperación de datos
+
+### Patrones de Escalabilidad
+- La arquitectura modular permite la adición incremental de características
+- El diseño de la base de datos soporta el crecimiento en el tamaño de la flota y el volumen de transacciones
+- El despliegue basado en contenedores permite la escalabilidad horizontal si es necesario

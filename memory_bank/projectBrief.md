@@ -1,68 +1,68 @@
-# Project Brief
+# Resumen del Proyecto
 
-## Overview
+## Visión General
 
-Building an **ERP system for mining operations** based on Odoo Community 18.0 that will **optimize fleet management, maintenance coordination, and inventory control** for Grupo Minero La Fundición, a mining company with approximately 40 employees.
+Construcción de un **sistema ERP para operaciones mineras** basado en Odoo Community 18.0 que **optimizará la gestión de flotas, la coordinación de mantenimiento y el control de inventario** para Grupo Minero La Fundición, una empresa minera con aproximadamente 40 empleados.
 
-## Core Features
+## Características Principales
 
-- **Fleet Management**: Real-time tracking of mining vehicles and equipment with operator assignments
-- **Maintenance Coordination**: Structured preventive and corrective maintenance workflows with work orders
-- **Inventory Control**: Comprehensive spare parts and materials management with procurement integration
-- **Employee Management**: Departmental hierarchy and role-based access control
-- **Dashboard Interface**: Role-specific views for operators, mechanics, supervisors, and administrators
-- **Mobile-Responsive Design**: Field-ready interface for tablets and smartphones
+- **Gestión de Flotas**: Seguimiento en tiempo real de vehículos y equipos mineros con asignaciones de operador
+- **Coordinación de Mantenimiento**: Flujos de trabajo de mantenimiento preventivo y correctivo estructurados con órdenes de trabajo
+- **Control de Inventario**: Gestión integral de repuestos y materiales con integración de adquisiciones
+- **Gestión de Empleados**: Jerarquía departamental y control de acceso basado en roles
+- **Interfaz de Panel**: Vistas específicas de roles para operadores, mecánicos, supervisores y administradores
+- **Diseño Adaptable a Móviles**: Interfaz lista para el campo para tabletas y teléfonos inteligentes
 
-## Target Users
+## Usuarios Objetivo
 
-**Primary Users:**
-- **Fleet Operators** (~15 users): Need quick access to assigned equipment status and problem reporting
-- **Mechanics and Technicians** (~8 users): Require work order management and parts availability information
-- **Supervisors and Management** (~5 users): Need operational oversight and decision-making dashboards
-- **Administrative Staff** (~12 users): Handle procurement, inventory, and general system administration
+**Usuarios Principales:**
+- **Operadores de Flota** (~15 usuarios): Necesitan acceso rápido al estado del equipo asignado y reporte de problemas
+- **Mecánicos y Técnicos** (~8 usuarios): Requieren gestión de órdenes de trabajo e información de disponibilidad de piezas
+- **Supervisores y Gerencia** (~5 usuarios): Necesitan supervisión operativa y paneles de toma de decisiones
+- **Personal Administrativo** (~12 usuarios): Manejan adquisiciones, inventario y administración general del sistema
 
-**User Roles:**
+**Roles de Usuario:**
 - Director General
-- Operations Supervisor
-- Maintenance Supervisor
-- Equipment Operators
-- Mechanics (Lead and Auxiliary)
-- Warehouse/Inventory Staff
-- Procurement/Purchasing
-- Administrative Personnel
+- Supervisor de Operaciones
+- Supervisor de Mantenimiento
+- Operadores de Equipo
+- Mecánicos (Líder y Auxiliar)
+- Personal de Almacén/Inventario
+- Compras/Adquisiciones
+- Personal Administrativo
 
-## Technical Preferences
+## Preferencias Técnicas
 
-### Required Technologies
-- **Platform**: Odoo Community 18.0 (ERP framework)
-- **Database**: PostgreSQL
-- **Deployment**: Docker containerization
-- **Development**: Python (Odoo's native language)
+### Tecnologías Requeridas
+- **Plataforma**: Odoo Community 18.0 (marco ERP)
+- **Base de Datos**: PostgreSQL
+- **Despliegue**: Contenerización Docker
+- **Desarrollo**: Python (lenguaje nativo de Odoo)
 
-### Development Tools
-- **AI Assistant**: Claude Code (Cline) for development support
-- **Documentation**: Context7 MCP server for Odoo documentation access
-- **Integration**: Custom MCP servers for enhanced capabilities
-- **Version Control**: Git for configuration and custom module tracking
+### Herramientas de Desarrollo
+- **Asistente de IA**: Claude Code (Cline) para soporte de desarrollo
+- **Documentación**: Servidor MCP Context7 para acceso a la documentación de Odoo
+- **Integración**: Servidores MCP personalizados para capacidades mejoradas
+- **Control de Versiones**: Git para el seguimiento de la configuración y los módulos personalizados
 
-### Specific Requirements
-- **Data Import**: CSV-based initial data loading for employees, fleet, and inventory
-- **Mobile Support**: Responsive web interface (no native mobile app required initially)
-- **Performance**: Support 40 concurrent users with sub-2 second response times
-- **Security**: Role-based access control using Odoo's built-in authentication
-- **Deployment**: Local/on-premise installation for data security
+### Requisitos Específicos
+- **Importación de Datos**: Carga inicial de datos basada en CSV para empleados, flota e inventario
+- **Soporte Móvil**: Interfaz web responsiva (no se requiere una aplicación móvil nativa inicialmente)
+- **Rendimiento**: Soporte para 40 usuarios concurrentes con tiempos de respuesta inferiores a 2 segundos
+- **Seguridad**: Control de acceso basado en roles utilizando la autenticación incorporada de Odoo
+- **Despliegue**: Instalación local/en las instalaciones para la seguridad de los datos
 
-### Constraints
-- **Budget**: Minimize costs by using community/open-source solutions
-- **Timeline**: 12-week implementation in 3 phases
-- **Resources**: Single developer with AI assistance
-- **Learning Curve**: Developer new to Python and Odoo platform
-- **Scope**: Focus on core modules (HR, Fleet, Inventory) before expanding
+### Restricciones
+- **Presupuesto**: Minimizar costos utilizando soluciones comunitarias/de código abierto
+- **Cronograma**: Implementación de 12 semanas en 3 fases
+- **Recursos**: Desarrollador único con asistencia de IA
+- **Curva de Aprendizaje**: Desarrollador nuevo en Python y la plataforma Odoo
+- **Alcance**: Enfoque en módulos principales (RRHH, Flota, Inventario) antes de expandir
 
-## Success Metrics
+## Métricas de Éxito
 
-- **Fleet Availability**: Achieve ≥80% equipment availability
-- **Maintenance Efficiency**: 25% reduction in average repair time
-- **Inventory Accuracy**: 98% stock record precision
-- **User Adoption**: 100% active usage within 3 months
-- **System Performance**: 99% uptime during operational hours (6 AM - 6 PM)
+- **Disponibilidad de Flota**: Lograr ≥80% de disponibilidad de equipos
+- **Eficiencia de Mantenimiento**: 25% de reducción en el tiempo promedio de reparación
+- **Precisión de Inventario**: 98% de precisión en el registro de existencias
+- **Adopción por el Usuario**: 100% de uso activo en 3 meses
+- **Rendimiento del Sistema**: 99% de tiempo de actividad durante las horas de operación (6 AM - 6 PM)
